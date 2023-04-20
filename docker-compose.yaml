@@ -1,0 +1,26 @@
+version: "3.7"
+
+services:
+  db:
+    image: mysql
+    container_name: python
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: test
+    volumes:
+      - Z:\vol:/var/lib/mysql
+    ports:
+      - 3306:3306
+
+  presentacion:
+    image: presentacion:1.0.0
+    container_name: presentacion
+    ports:
+      - 80:80
+
+  logica:
+    image: api:1.0.0
+    ports:
+      - 8000:8000
+    depends_on:
+      - db

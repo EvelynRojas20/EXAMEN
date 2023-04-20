@@ -1,0 +1,15 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<h3 class="text-center">REGISTRO DE USUARIOS</h3>
+<form (submit)="onSubmit()">
+    <div class="mb-3">
+      <label class="form-label" name="Nname" [(ngModel)]="nick_name">Usuario</label>
+      <input type="text" class="form-control"  aria-describedby="emailHelp" name="Nname" [(ngModel)]="nick_name">
+    </div>
+    <div class="mb-3">
+      <label class="form-label" name="description" [(ngModel)]="description">Contraseña</label>
+      <input type="text" class="form-control" name="description" [(ngModel)]="description">
+    </div>
+    <button type="submit" class="btn btn-primary">Agregar</button>
+  </form>
+
+<router-outlet></router-outlet>
